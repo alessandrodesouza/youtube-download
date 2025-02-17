@@ -3,7 +3,7 @@ from pytubefix import YouTube
 def download(url, caminho_destino="."):
     try:
         # Cria o objeto YouTube
-        yt = YouTube(url)
+        yt = YouTube(url, use_po_token=True)
 
         # Seleciona o stream com a maior resolução
         video_stream = yt.streams.get_highest_resolution()
